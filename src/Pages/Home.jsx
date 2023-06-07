@@ -1,6 +1,7 @@
+import Highlights from "../Components/Highlights"
 function Home (){
     return (
-        <h2>Home</h2>
+        <Highlights/>
     )
 }
 export default Home

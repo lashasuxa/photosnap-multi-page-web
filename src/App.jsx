@@ -6,6 +6,7 @@ import Pricing from './Pages/Pricing';
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 
+
 function App() {
   return (
     <Router>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/features" element={<Features />} />
         <Route path="/pricing" element={<Pricing />} />
       </Routes>
+      
       <Footer />
     </Router>
   );
