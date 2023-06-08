@@ -55,8 +55,8 @@ function Footer (){
             </LinksContainer>
             <div>
                 <InviteContainer>
-                    <p>get an invitation</p>
-                    <img src="/black-arrow.png" alt="" />
+                    <p>GET AN INVITATION</p>
+                    <img src="/grey-arrow.png" alt="" />
                 </InviteContainer>
                 <p>Copyright 2019. All Rights Reserved</p>
             </div>
