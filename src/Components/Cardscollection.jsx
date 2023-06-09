@@ -5,28 +5,25 @@ import styled from 'styled-components';
   {
       imgSrc: "/stories/desktop/mountains.jpg",
       title: "The Mountains",
-      author: "by John Appleseed",
-      readStoryText: "READ STORY",
+      author: "by John Appleseed"
   },
   {
       imgSrc: "/stories/desktop/cityscapes.jpg",
       title: "Sunset Cityscapes",
-      author: "by John Appleseed",
-      readStoryText: "READ STORY",
+      author: "by John Appleseed"
   },
   {
       imgSrc: "/stories/desktop/18-days-voyage.jpg",
       title: "18 Days Voyage",
-      author: "by John Appleseed",
-      readStoryText: "READ STORY",
+      author: "by John Appleseed"
   },
   {
       imgSrc: "/stories/desktop/architecturals.jpg",
       title: "Architecturals",
-      author: "by John Appleseed",
-      readStoryText: "READ STORY",
+      author: "by John Appleseed"
   },
 ];
+
 
 
 
@@ -101,7 +98,7 @@ function CardsCollection() {
                   <Author>{item.author}</Author>
                   <StyledHR />
                   <ReadStory>
-                      <ReadStoryText>{item.readStoryText}</ReadStoryText>
+                      <ReadStoryText>READ STORY</ReadStoryText>
                       <img src="/grey-arrow.png" alt="" />
                   </ReadStory>
               </Card>
