@@ -1,67 +1,208 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const FooterContainer = styled.div`
+
+const FooterDiv = styled.div`
+  width: 100%;
+  padding: 56px 60px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+  @media (min-width: 768px) {
+    padding: 64px 40px;
+    flex-direction: row;
+  }
+  @media (min-width: 1440px) {
+    padding: 65px 170px;
+  }
+`;
+
+const TabletDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const Logo = styled.img`
+  order: -2;
+  width: 170px;
+`;
+const IconDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  height: 250px;
-  background: black;
-  color: white;
-  padding: 64px 0;
+  margin-top: 32px;
+  @media (min-width: 768px) {
+    margin-top: 72px;
+    justify-content: flex-start;
+  }
+  @media (min-width: 768px) {
+    margin-top: 85px;
+  }
 `;
 
-const SocialContainer = styled.div`
-  display: flex;
-  gap: 20px; // Adjust this for the space between the images
+const IconImage = styled.img`
+  margin-right: 14px;
+  cursor: pointer;
 `;
-
 const StyledLink = styled(Link)`
-  color: inherit; // This makes the links have the same color as normal text
-  text-decoration: none; // This removes the underline from the links
+  color: white;
+  text-decoration: none;
 `;
 
-const InviteContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px; // Adjust this for the space between the text and the image
-`;
-
-const LinksContainer = styled.div`
+const OptionList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 19px;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  @media (min-width: 768px) {
+    order: -2;
+    flex-direction: row;
+  }
+  @media (min-width: 1440px) {
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 110px;
+    margin-right: 0;
+    align-items: flex-start;
+  }
 `;
 
-function Footer (){
-    return (
-        <FooterContainer>
-            <div>
-                <img src="/logo-white.png" alt="" />
-                <SocialContainer>
-                    <img src="/shared/desktop/facebook.svg" alt="" />
-                    <img src="/shared/desktop/youtube.svg" alt="" />
-                    <img src="/shared/desktop/twitter.svg" alt="" />
-                    <img src="/shared/desktop/pinterest.svg" alt="" />
-                    <img src="/shared/desktop/instagram.svg" alt="" />
-                </SocialContainer>
-            </div>
-            <LinksContainer>
-                <StyledLink to="/">Home</StyledLink>
-                <StyledLink to="/stories">Stories</StyledLink>
-                <StyledLink to="/features">Features</StyledLink>
-                <StyledLink to="/pricing">Pricing</StyledLink>
-            </LinksContainer>
-            <div>
-                <InviteContainer>
-                    <p>GET AN INVITATION</p>
-                    <img src="/grey-arrow.png" alt="" />
-                </InviteContainer>
-                <p>Copyright 2019. All Rights Reserved</p>
-            </div>
-        </FooterContainer>
-    )
-}
+const TabletDivTwo = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+`;
+const ButtonDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 120px;
+  margin-bottom: 34px;
+  @media (min-width: 768px) {
+    margin-top: 0px;
+    justify-content: flex-end;
+  }
+  @media (min-width: 1440px) {
+    margin-bottom: 0px;
+  }
+`;
 
-export default Footer;
+const Invite = styled.span`
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  cursor: pointer;
+`;
+
+const Arrow = styled.img`
+  margin-left: 22px;
+  cursor: pointer;
+`;
+const Copyright = styled.span`
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+
+  @media (min-width: 768px) {
+    margin-top: 100px;
+    text-align: right;
+  }
+  @media (min-width: 768px) {
+    margin-top: 86px;
+  }
+`;
+
+const DesktopDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    align-items: center;
+  }
+`;
+
+const Extra = styled.div`
+  margin: auto;
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+  @media (min-width: 1440px) {
+    margin-top: 22px;
+  }
+`;
+
+
+
+
+
+ function Footer() {
+  return (
+    <>
+      <FooterDiv>
+        <TabletDiv>
+          <DesktopDiv>
+            <Extra>
+              <Logo src="/logo-white.png" alt="logo" />
+              <IconDiv>
+                <IconImage src="/facebook.png" alt="facebook icon" />
+                <IconImage src="/youtube.png" alt="youtube icon" />
+                <IconImage src="/twitter.png" alt="twitter icon" />
+                <IconImage src="/pinterest.png" alt="pinterest" />
+                <IconImage src="/instagram.png" alt="instagram" />
+              </IconDiv>
+            </Extra>
+            <div>
+              <OptionList>
+                <StyledLink className="linkfooter" to="/">
+                  home
+                </StyledLink>
+
+                <StyledLink className="linkfooter" to="/stories">
+                  stories
+                </StyledLink>
+
+                <StyledLink className="linkfooter" to="/features">
+                  features
+                </StyledLink>
+
+                <StyledLink className="linkfooter" to="/pricing">
+                  pricing
+                </StyledLink>
+              </OptionList>
+            </div>
+          </DesktopDiv>
+        </TabletDiv>
+        <TabletDivTwo>
+          <ButtonDiv>
+            <Invite>GET AN INVITE</Invite>
+            <Arrow src="/grey-arrow.png" alt="arrow" />
+          </ButtonDiv>
+          <Copyright>Copyright 2019. All Rights Reserved</Copyright>
+        </TabletDivTwo>
+      </FooterDiv>
+    </>
+  );
+}
+export default Footer
+

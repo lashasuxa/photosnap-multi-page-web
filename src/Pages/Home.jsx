@@ -8,9 +8,9 @@ const HomeContainer = styled.div`
   align-items: center;
 `;
 
-const Section1 = styled.div`
+const Section = styled.div`
   display: flex;
-  height: 650px;
+  height: ${props => props.height || '650px'};
 `;
 
 const BlackDiv = styled.div`
@@ -18,62 +18,87 @@ const BlackDiv = styled.div`
   background: black;
 `;
 
-const Section2 = styled.div`
-  display: flex;
-  height: 600px;
-`;
-
-const Section2Text = styled.div`
+const TextContainer = styled.div`
+ 
   width: 610px;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: black;
-  color: white;
+  background: ${props => props.background || 'black'};
+  color: ${props => props.color || 'white'};
 `;
 
-const Section3 = styled.div`
-  display: flex;
-  height: 600px;
+const StyledH2 = styled.h2`
+  width: 387px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 4.16667px;
+  text-transform: uppercase;
+  margin-bottom: 21px;
 `;
 
-const Section3Text = styled.div`
-  width: 610px;
+const StyledP = styled.p`
+  width: 387px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+`;
+
+const InviteDiv = styled.div`
+  margin-top: 48px;
   display: flex;
+  flex-direction: row;
+
   align-items: center;
-  justify-content: center;
-  background: black;
-  color: white;
+  width: 387px;
 `;
 
 function Home() {
   return (
     <HomeContainer>
-      <Section1>
+      <Section height="650px">
         <BlackDiv>
-        <Section2Text>
-          <h2>BEAUTIFUL STORIES
-            EVERY TIME</h2>
-        <p>We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.</p>
-        <div>
-            <p>VIEW THE STORIES</p>
-            <img src="/public/grey-arrow.png" alt="" />
-        </div>
-        </Section2Text>
+          <TextContainer>
+            <StyledH2>Create and share your photo stories.</StyledH2>
+            <StyledP>Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.</StyledP>
+            <InviteDiv>
+              <StyledP>GET AN INVITE</StyledP>
+              <img src="/public/grey-arrow.png" alt="" />
+            </InviteDiv>
+          </TextContainer>
         </BlackDiv>
         <img src="/home/desktop/create-and-share.jpg" alt="" />
-        
-      </Section1>
-      <Section2>
+      </Section>
+
+      <Section height="600px">
         <img src="/home/desktop/beautiful-stories.jpg" alt="" />
-   
-      </Section2>
-      <Section3>
-        <Section3Text>
-          <p>Designed for Everyone</p>
-        </Section3Text>
+        <TextContainer background="white" color="black">
+          <StyledH2>BEAUTIFUL STORIES EVERY TIME</StyledH2>
+          <StyledP>We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.</StyledP>
+          <InviteDiv>
+              <StyledP>GET AN INVITE</StyledP>
+              <img src="/public/black-arrow.png" alt="" />
+            </InviteDiv>
+        </TextContainer>
+      </Section>
+
+      <Section height="600px">
+        <TextContainer background="white" color="black">
+          <StyledH2>Designed for Everyone</StyledH2>
+          <StyledP>Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it. </StyledP>
+          <InviteDiv>
+              <StyledP>GET AN INVITE</StyledP>
+              <img src="/public/black-arrow.png" alt="" />
+            </InviteDiv>
+        </TextContainer>
         <img src="/home/desktop/designed-for-everyone.jpg" alt="" />
-      </Section3>
+      </Section>
+
       <CardsCollection />
       <Highlights />
     </HomeContainer>

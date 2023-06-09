@@ -1,5 +1,35 @@
 import styled from 'styled-components';
 
+
+ const FullCollection = [
+  {
+      imgSrc: "/stories/desktop/mountains.jpg",
+      title: "The Mountains",
+      author: "by John Appleseed",
+      readStoryText: "READ STORY",
+  },
+  {
+      imgSrc: "/stories/desktop/cityscapes.jpg",
+      title: "Sunset Cityscapes",
+      author: "by John Appleseed",
+      readStoryText: "READ STORY",
+  },
+  {
+      imgSrc: "/stories/desktop/18-days-voyage.jpg",
+      title: "18 Days Voyage",
+      author: "by John Appleseed",
+      readStoryText: "READ STORY",
+  },
+  {
+      imgSrc: "/stories/desktop/architecturals.jpg",
+      title: "Architecturals",
+      author: "by John Appleseed",
+      readStoryText: "READ STORY",
+  },
+];
+
+
+
 const CardsCollectionContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -13,6 +43,7 @@ const Card = styled.div`
   justify-content: flex-end;
   flex: 1;
   height: 100%;
+  width:360px;
   padding: 40px;
   color: white;
   background-size: cover;
@@ -56,63 +87,27 @@ const ReadStoryText = styled.p`
   letter-spacing: 2px;
 `;
 
-const Card1 = styled(Card)`
-  background-image: url("/stories/desktop/mountains.jpg");
-`;
 
-const Card2 = styled(Card)`
-  background-image: url("/stories/desktop/cityscapes.jpg");
-`;
 
-const Card3 = styled(Card)`
-  background-image: url("/stories/desktop/18-days-voyage.jpg");
-`;
-
-const Card4 = styled(Card)`
-  background-image: url("/stories/desktop/architecturals.jpg");
-`;
-
-function CardsCollection (){
-    return (
-        <CardsCollectionContainer>
-            <Card1 >
-                <Title>The Mountains</Title>
-                <Author>by John Appleseed</Author>
-                <StyledHR />
-                <ReadStory>
-                    <ReadStoryText>READ STORY</ReadStoryText>
-                    <img src="/grey-arrow.png" alt="" />
-                </ReadStory>
-            </Card1>
-            <Card2>
-                <Title>Sunset Cityscapes</Title>
-                <Author>by John Appleseed</Author>
-                <StyledHR />
-                <ReadStory>
-                    <ReadStoryText>READ STORY</ReadStoryText>
-                    <img src="/grey-arrow.png" alt="" />
-                </ReadStory>
-            </Card2>
-            <Card3>
-                <Title>18 Days Voyage</Title>
-                <Author>by John Appleseed</Author>
-                <StyledHR />
-                <ReadStory>
-                    <ReadStoryText>READ STORY</ReadStoryText>
-                    <img src="/grey-arrow.png" alt="" />
-                </ReadStory>
-            </Card3>
-            <Card4>
-                <Title>Architecturals</Title>
-                <Author>by John Appleseed</Author>
-                <StyledHR />
-                <ReadStory>
-                    <ReadStoryText>READ STORY</ReadStoryText>
-                    <img src="/grey-arrow.png" alt="" />
-                </ReadStory>
-            </Card4>
-        </CardsCollectionContainer>
-    )
+function CardsCollection() {
+  return (
+      <CardsCollectionContainer>
+          {FullCollection.map((item, index) => (
+              <Card
+                  key={index}
+                  style={{ backgroundImage: `url(${item.imgSrc})` }}
+              >
+                  <Title>{item.title}</Title>
+                  <Author>{item.author}</Author>
+                  <StyledHR />
+                  <ReadStory>
+                      <ReadStoryText>{item.readStoryText}</ReadStoryText>
+                      <img src="/grey-arrow.png" alt="" />
+                  </ReadStory>
+              </Card>
+          ))}
+      </CardsCollectionContainer>
+  );
 }
 
 export default CardsCollection;
