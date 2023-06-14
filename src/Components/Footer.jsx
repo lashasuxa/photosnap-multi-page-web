@@ -14,7 +14,7 @@ const FooterDiv = styled.div`
     flex-direction: row;
   }
   @media (min-width: 1440px) {
-    padding: 65px 170px;
+    padding: 64px 196px;
   }
 `;
 

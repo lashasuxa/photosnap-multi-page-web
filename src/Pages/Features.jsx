@@ -1,9 +1,15 @@
 import Highlights from "../Components/Highlights"
+import Invite from "../Components/Invite"
+import SubHead from "../Components/SubHead"
+
 function Features (){
     return (
         <>
-        <h2>Features</h2>
+        
+        <SubHead itemIndex={0} />
         <Highlights/>
+        <Invite/>
+       
         </>
     )
 }

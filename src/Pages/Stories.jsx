@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import CardsCollection from "../Components/CardsCollection"
+import CardsCollection from "../Components/CardsCollection";
+import { AllCollection } from "../Components/CardsCollection"; 
 
 const StoryDiv = styled.div`
   background: url('/public/stories/desktop/moon-of-appalacia.jpg') no-repeat center center/cover;
@@ -47,9 +48,10 @@ const ArrowImg = styled.img`
   margin-left: 10px;  //adjust as needed
 `;
 
+
 function Stories (){
     return (
-        <>
+        <div>
         <StoryDiv>
             <StoryInfo>LAST MONTH’S FEATURED STORY</StoryInfo>
             <StoryTitle>HAZY FULL MOON OF APPALACHIA</StoryTitle>
@@ -60,10 +62,13 @@ function Stories (){
                 <ArrowImg src="/public/grey-arrow.png" alt="arrow" />
             </StoryLink>
         </StoryDiv>
+
         
-        <CardsCollection/>
+        <CardsCollection collection={AllCollection}/>  
+     
+     
         
-        </>
+        </div>
         
     )
 }

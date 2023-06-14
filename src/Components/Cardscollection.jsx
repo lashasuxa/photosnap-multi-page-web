@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
- const FullCollection = [
+ const rowCollection = [
   {
       imgSrc: "/stories/desktop/mountains.jpg",
       title: "The Mountains",
@@ -24,11 +24,126 @@ import styled from 'styled-components';
   },
 ];
 
+export const AllCollection = [
+  {
+      imgSrc: "/stories/desktop/mountains.jpg",
+      date:"April 16th 2020",
+      title: "The Mountains",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/cityscapes.jpg",
+      date:"April 16th 2020",
+      title: "Sunset Cityscapes",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/18-days-voyage.jpg",
+      date:"April 16th 2020",
+      title: "18 Days Voyage",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/architecturals.jpg",
+      date:"April 16th 2020",
+      title: "Architecturals",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/world-tour.jpg",
+      date:"April 7th 2020",
+      title: "World Tour 2019",
+      author: "by Timothy Wagner",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/unforeseen-corners.jpg",
+      date:"April 3rd 2020",
+      title: "Unforeseen Corners",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/18-days-voyage.jpg",
+      date:"April 16th 2020",
+      title: "18 Days Voyage",
+      author: "by William Malcolm",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/architecturals.jpg",
+      date:"April 16th 2020",
+      title: "Architecturals",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/mountains.jpg",
+      date:"April 16th 2020",
+      title: "The Mountains",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/cityscapes.jpg",
+      date:"April 16th 2020",
+      title: "Sunset Cityscapes",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/18-days-voyage.jpg",
+      date:"April 16th 2020",
+      title: "18 Days Voyage",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/architecturals.jpg",
+      date:"April 16th 2020",
+      title: "Architecturals",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/mountains.jpg",
+      date:"April 16th 2020",
+      title: "The Mountains",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/cityscapes.jpg",
+      date:"April 16th 2020",
+      title: "Sunset Cityscapes",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/18-days-voyage.jpg",
+      date:"April 16th 2020",
+      title: "18 Days Voyage",
+      author: "by John Appleseed",
+     
+  },
+  {
+      imgSrc: "/stories/desktop/architecturals.jpg",
+      date:"April 16th 2020",
+      title: "Architecturals",
+      author: "by John Appleseed",
+     
+  },
+];
 
 
 
 const CardsCollectionContainer = styled.div`
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   width: 100%;
   height: 500px;
@@ -86,10 +201,11 @@ const ReadStoryText = styled.p`
 
 
 
-function CardsCollection() {
+
+function CardsCollection({ collection = rowCollection }) {
   return (
       <CardsCollectionContainer>
-          {FullCollection.map((item, index) => (
+          {collection.map((item, index) => (
               <Card
                   key={index}
                   style={{ backgroundImage: `url(${item.imgSrc})` }}

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import CardsCollection from '../Components/CardsCollection';
 import Highlights from '../Components/Highlights';
 
+
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -99,8 +100,8 @@ function Home() {
         <img src="/home/desktop/designed-for-everyone.jpg" alt="" />
       </Section>
 
-      <CardsCollection />
-      <Highlights />
+      <CardsCollection />  
+      <Highlights maxHighlights={3} />
     </HomeContainer>
   );
 }
