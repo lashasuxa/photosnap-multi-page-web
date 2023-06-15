@@ -1,17 +1,19 @@
 import styled from 'styled-components';
 
 const HighlightsContainer = styled.div`
-margin-top: 160px;
-margin-bottom: 160px;
+  margin-top: 160px;
+  margin-bottom: 160px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+  max-width: 1440px;
   align-items: center;
-  width: 1110;
-  height: 475px;
+  height: 576px;
   gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
 `;
+
 
 const Highlight = styled.div`
   display: flex;

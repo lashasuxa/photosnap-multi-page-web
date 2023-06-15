@@ -108,10 +108,12 @@ const AllCollection = [
 const CardsCollectionContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: row wrap;
   background-color: white;
   
   width: 100%;
+  max-width: 1440px;
   
 `;
 
