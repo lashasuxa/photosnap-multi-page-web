@@ -8,7 +8,7 @@ const HeaderContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 70px;
-  padding: 0 20px; // Add some padding on sides for better look on smaller screens
+  padding:  20px 165px; // Add some padding on sides for better look on smaller screens
 `;
 
 const NavContainer = styled.div`

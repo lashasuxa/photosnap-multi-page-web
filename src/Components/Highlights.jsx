@@ -6,6 +6,7 @@ margin-bottom: 160px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
   align-items: center;
   width: 1110;
   height: 475px;
