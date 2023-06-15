@@ -7,7 +7,7 @@ margin-bottom: 160px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 1110;
   height: 475px;
   gap: 30px;
 `;
@@ -15,7 +15,7 @@ margin-bottom: 160px;
 const Highlight = styled.div`
   display: flex;
   width: 350px;
-  height: ;
+ 
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -27,7 +27,7 @@ const HighlightTitle = styled.h6`
   font-size: 18px;
   line-height: 25px;
   margin-bottom: 16px;
-  margin-top: ;
+  
 `;
 
 const HighlightText = styled.p`
@@ -73,7 +73,7 @@ const allHighlights = [
   }
 ];
 
-function Highlights({ maxHighlights = allHighlights.length }) {
+function Highlights({ maxHighlights }) {
   return (
       <HighlightsContainer>
           {allHighlights.slice(0, maxHighlights).map((highlight, index) => (

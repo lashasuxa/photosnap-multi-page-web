@@ -7,7 +7,7 @@ function Features (){
         <>
         
         <SubHead itemIndex={0} />
-        <Highlights/>
+        <Highlights maxHighlights={6}/>
         <Invite/>
        
         </>

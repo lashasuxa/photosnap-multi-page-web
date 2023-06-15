@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import CardsCollection from '../Components/CardsCollection';
 import Highlights from '../Components/Highlights';
+import { AllCollection } from "../Components/CardsCollection"; 
 
 
 const HomeContainer = styled.div`
@@ -11,7 +12,15 @@ const HomeContainer = styled.div`
 
 const Section = styled.div`
   display: flex;
+  flex-direction: ${props => props.reverse ? 'row-reverse' : 'row'};
   height: ${props => props.height || '650px'};
+  background: ${props => props.background || 'black'};
+  color: ${props => props.color || 'white'};
+  
+  @media (max-width: 768px) {  // Adjust the breakpoint as per your needs
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const BlackDiv = styled.div`
@@ -20,15 +29,12 @@ const BlackDiv = styled.div`
 `;
 
 const TextContainer = styled.div`
- 
   width: 610px;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: ${props => props.background || 'black'};
-  color: ${props => props.color || 'white'};
 `;
 
 const StyledH2 = styled.h2`
@@ -62,7 +68,7 @@ const InviteDiv = styled.div`
 function Home() {
   return (
     <HomeContainer>
-      <Section height="650px">
+      <Section height="650px" background="black" color="white">
         <BlackDiv>
           <TextContainer>
             <StyledH2>Create and share your photo stories.</StyledH2>
@@ -76,9 +82,9 @@ function Home() {
         <img src="/home/desktop/create-and-share.jpg" alt="" />
       </Section>
 
-      <Section height="600px">
+      <Section height="600px"  background="white" color="black">
         <img src="/home/desktop/beautiful-stories.jpg" alt="" />
-        <TextContainer background="white" color="black">
+        <TextContainer>
           <StyledH2>BEAUTIFUL STORIES EVERY TIME</StyledH2>
           <StyledP>We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.</StyledP>
           <InviteDiv>
@@ -88,8 +94,8 @@ function Home() {
         </TextContainer>
       </Section>
 
-      <Section height="600px">
-        <TextContainer background="white" color="black">
+      <Section height="600px" background="white" color="black">
+        <TextContainer>
           <StyledH2>Designed for Everyone</StyledH2>
           <StyledP>Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it. </StyledP>
           <InviteDiv>
@@ -100,10 +106,11 @@ function Home() {
         <img src="/home/desktop/designed-for-everyone.jpg" alt="" />
       </Section>
 
-      <CardsCollection />  
+      <CardsCollection collection={AllCollection.slice(0, 4)} />
       <Highlights maxHighlights={3} />
     </HomeContainer>
   );
 }
+
 
 export default Home;

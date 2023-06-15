@@ -1,5 +1,132 @@
 import styled from "styled-components";
 
+const Features = styled.div`
+  padding: 0px 28px 64px 28px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center children along the cross axis
+
+  @media (min-width: 1440px) {
+    padding-left: 355px;
+    padding-right: 355px;
+    padding-bottom: 160px;
+  }
+
+  h1 {
+    margin-bottom: 56px; // Add margin-bottom to h1
+    text-align: center; // Center the text within h1
+  }
+`;
+
+
+
+
+const FeaturesHead = styled.span`
+  width: 100%;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #000000;
+  text-transform: uppercase;
+`;
+
+const Line = styled.div`
+  border: 1px solid #000000;
+  margin-top: 23px;
+  width: 100%;
+`;
+
+const Story = styled.span`
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  color: #000000;
+  text-transform: uppercase;
+  margin-top: 23px;
+  width: 100%;
+`;
+
+const TypesDiv = styled.div`
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+`;
+
+const TypeDiv = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const TypeDivTabletTest = styled.div`
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin-left: 0px;
+    justify-content: space-around;
+    align-items: center;
+  }
+`;
+const TypeDivTablet = styled.div`
+  display: none;
+  @media (min-width: 768px) {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 25px;
+  }
+`;
+
+const Type = styled.span`
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: 1.66667px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  text-transform: uppercase;
+  @media (min-width: 768px) {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #000000;
+    opacity: 1;
+  }
+`;
+
+const Mark = styled.img`
+  margin-top: 8px;
+  @media (min-width: 768px) {
+    margin-top: 25px;
+    margin: auto;
+  }
+`;
+
+const LineLight = styled.div`
+  width: 100%;
+  border: 1px solid #dfdfdf;
+  background: #dfdfdf;
+  margin-top: 24px;
+`;
+
+const HeaderDiv = styled.div`
+  width: 100%;
+  display: flex;
+`;
+
 function Compare() {
   return (
     <>
@@ -195,124 +322,6 @@ function Compare() {
   );
 }
 
-const Features = styled.div`
-  padding: 0px 28px 64px 28px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  @media (min-width: 1440px) {
-    padding-left: 355px;
-    padding-right: 355px;
-    padding-bottom: 160px;
-  }
-`;
 
-
-
-
-const FeaturesHead = styled.span`
-  width: 100%;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 2px;
-  text-align: left;
-  color: #000000;
-  text-transform: uppercase;
-`;
-
-const Line = styled.div`
-  border: 1px solid #000000;
-  margin-top: 23px;
-  width: 100%;
-`;
-
-const Story = styled.span`
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 2px;
-  color: #000000;
-  text-transform: uppercase;
-  margin-top: 23px;
-  width: 100%;
-`;
-
-const TypesDiv = styled.div`
-  margin-top: 16px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-`;
-
-const TypeDiv = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;
-
-const TypeDivTabletTest = styled.div`
-  display: none;
-  @media (min-width: 768px) {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    margin-left: 0px;
-    justify-content: space-around;
-    align-items: center;
-  }
-`;
-const TypeDivTablet = styled.div`
-  display: none;
-  @media (min-width: 768px) {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 25px;
-  }
-`;
-
-const Type = styled.span`
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13px;
-  letter-spacing: 1.66667px;
-  color: #000000;
-  mix-blend-mode: normal;
-  opacity: 0.5;
-  text-transform: uppercase;
-  @media (min-width: 768px) {
-    font-size: 12px;
-    line-height: 16px;
-    text-align: center;
-    letter-spacing: 2px;
-    color: #000000;
-    opacity: 1;
-  }
-`;
-
-const Mark = styled.img`
-  margin-top: 8px;
-  @media (min-width: 768px) {
-    margin-top: 25px;
-    margin: auto;
-  }
-`;
-
-const LineLight = styled.div`
-  width: 100%;
-  border: 1px solid #dfdfdf;
-  background: #dfdfdf;
-  margin-top: 24px;
-`;
-
-const HeaderDiv = styled.div`
-  width: 100%;
-  display: flex;
-`;
 
 export default Compare

@@ -43,6 +43,10 @@ const StoryLink = styled.div`
   cursor: pointer;
   margin-top: 24px;
 `;
+const CollectionContainer = styled.div`
+  display: flex;
+
+`;
 
 const ArrowImg = styled.img`
   margin-left: 10px;  //adjust as needed
@@ -62,9 +66,10 @@ function Stories (){
                 <ArrowImg src="/public/grey-arrow.png" alt="arrow" />
             </StoryLink>
         </StoryDiv>
-
-        
+         
+        <CollectionContainer>
         <CardsCollection collection={AllCollection}/>  
+        </CollectionContainer>
      
      
         

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const PriceListContainer = styled.div`
@@ -45,9 +45,10 @@ const ToggleCircle = styled.div`
 `;
 
 const Card = styled.div`
-  background-color: #F5F5F5;
-  width:350px;
-  height: 407px;
+  background-color: ${props => props.isPro ? 'black' : '#F5F5F5'};
+  color: ${props => props.isPro ? 'white' : 'black'};
+  width: 350px;
+  height: ${props => props.isPro ? '470px' : '407px'};
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -63,22 +64,27 @@ const CardTitle = styled.h2`
 
 const CardText = styled.p``;
 
-const CardPrice = styled.div``;
+const CardPrice = styled.div`
+font-weight: 700;
+font-size: 40px;
+line-height: 48px;
+
+letter-spacing: 4.16667px;
+`;
 
 const PriceAmount = styled.div``;
 
 const PricePeriod = styled.div``;
 
 const CardButton = styled.button`
-height: 40px;
-background: #DFDFDF;
-color: black;
-font-size: 12px;
-line-height: 16px;
-text-align: center;
-letter-spacing: 2px;
-text-transform: uppercase;
-
+  height: 40px;
+  background: ${props => props.isPro ? 'white' : 'black'};
+  color: ${props => props.isPro ? 'black' : 'white'};
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 `;
 
 const priceData = [
@@ -103,14 +109,14 @@ function PriceList() {
       </ToggleButtonContainer>
       <PriceListContainer>
         {priceData.map(({ plan, monthlyPrice, yearlyPrice, text }, index) => (
-          <Card key={index}>
+          <Card key={index} isPro={plan === 'Pro'}>
             <CardTitle>{plan}</CardTitle>
             <CardText>{text}</CardText>
             <CardPrice>
               <PriceAmount>${(yearly ? yearlyPrice : monthlyPrice).toFixed(2)}</PriceAmount>
-              <PricePeriod>{yearly ? 'year' : 'month'}</PricePeriod>
             </CardPrice>
-            <CardButton>Pick Plan</CardButton>
+              <PricePeriod>{yearly ? 'per year' : 'per month'}</PricePeriod>
+            <CardButton isPro={plan === 'Pro'}>Pick Plan</CardButton>
           </Card>
         ))}
       </PriceListContainer>
