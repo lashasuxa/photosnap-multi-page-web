@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import CardsCollection from '../Components/CardsCollection';
+import CardsCollection from '../Components/Cardscollection';
 import Highlights from '../Components/Highlights';
-import { AllCollection } from "../Components/CardsCollection"; 
+import { AllCollection } from '../Components/Cardscollection';
+
 
 
 const HomeContainer = styled.div`
