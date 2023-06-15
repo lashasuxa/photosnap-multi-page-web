@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import CardsCollection from "../Components/CardsCollection";
-import { AllCollection } from "../Components/CardsCollection"; 
+import CardsCollection from '../Components/CardsCollection';
+import { AllCollection } from '../Components/CardsCollection';
+
 
 const StoryDiv = styled.div`
-  background: url('/public/stories/desktop/moon-of-appalacia.jpg') no-repeat center center/cover;
+  background: url('/stories/desktop/moon-of-appalacia.jpg') no-repeat center center/cover;
   width: 100%;  //adjust as needed
   height: 650px;  //adjust as needed
   display: flex;
@@ -63,7 +64,7 @@ function Stories (){
             <StoryInfo>The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.</StoryInfo>
             <StoryLink>
                 <StoryInfo>READ THE STORY</StoryInfo>
-                <ArrowImg src="/public/grey-arrow.png" alt="arrow" />
+                <ArrowImg src="/grey-arrow.png" alt="arrow" />
             </StoryLink>
         </StoryDiv>
          
