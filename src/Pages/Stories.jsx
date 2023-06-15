@@ -5,8 +5,8 @@ import { AllCollection } from '../Components/CardsCollection';
 
 const StoryDiv = styled.div`
   background: url('/stories/desktop/moon-of-appalacia.jpg') no-repeat center center/cover;
-  width: 100%;  //adjust as needed
-  height: 650px;  //adjust as needed
+  width: 100%;  
+  height: 650px;  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +50,7 @@ const CollectionContainer = styled.div`
 `;
 
 const ArrowImg = styled.img`
-  margin-left: 10px;  //adjust as needed
+  margin-left: 10px;  
 `;
 
 
