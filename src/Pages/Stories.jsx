@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import CardsCollection from '../Components/CardsCollection';
-import { AllCollection } from '../Components/CardsCollection';
+import Collection from '../Components/Collection';
+import { AllCollection } from '../Components/Collection';
 
 
 const StoryDiv = styled.div`
@@ -69,7 +69,7 @@ function Stories (){
         </StoryDiv>
          
         <CollectionContainer>
-        <CardsCollection collection={AllCollection}/>  
+        <Collection collection={AllCollection}/>  
         </CollectionContainer>
      
      

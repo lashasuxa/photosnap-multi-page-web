@@ -177,7 +177,7 @@ const ReadStoryText = styled.p`
 
 
 
-function CardsCollection({ collection = AllCollection }) {
+function Collection({ collection = AllCollection }) {
     return (
         <CardsCollectionContainer>
             {collection.map((item, index) => (
@@ -199,4 +199,4 @@ function CardsCollection({ collection = AllCollection }) {
   }
   
 
-export default CardsCollection;
+export default Collection;

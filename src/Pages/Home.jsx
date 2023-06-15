@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import CardsCollection from '../Components/CardsCollection.jsx';
+import Collection from '../Components/Collection.jsx';
 import Highlights from '../Components/Highlights';
-import { AllCollection } from '../Components/CardsCollection.jsx';
+import { AllCollection } from '../Components/Collection.jsx';
 
 
 
@@ -107,7 +107,7 @@ function Home() {
         <img src="/home/desktop/designed-for-everyone.jpg" alt="" />
       </Section>
 
-      <CardsCollection collection={AllCollection.slice(0, 4)} />
+      <Collection collection={AllCollection.slice(0, 4)} />
       <Highlights maxHighlights={3} />
     </HomeContainer>
   );
