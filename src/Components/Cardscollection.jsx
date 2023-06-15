@@ -111,7 +111,7 @@ const CardsCollectionContainer = styled.div`
   align-items: center;
   flex-flow: row wrap;
   background-color: white;
-  
+  margin:0 auto;
   width: 100%;
   max-width: 1440px;
   
