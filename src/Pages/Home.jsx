@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import CardsCollection from '../Components/CardsCollection';
+import CardsCollection from '../Components/CardsCollection.jsx';
 import Highlights from '../Components/Highlights';
-import { AllCollection } from '../Components/CardsCollection';
+import { AllCollection } from '../Components/CardsCollection.jsx';
 
 
 
